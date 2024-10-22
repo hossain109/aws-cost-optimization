@@ -1,0 +1,14 @@
+The procedure for cost optimization by using lamda function
+
+1. Create a lamda function and in cdoe option create a file ebs_stale_snapshot.policy
+2. Now deploy the code then Test (if not triggered), may be result will be error with execution time and autorisation
+3. For execution time go to configure generale and modify execution time 10s instead of 3 second(default).
+4. For autorisation go to permission create politic under the role snapshot(name role see in permission option)
+  1.create politic for snapshot and ec2 (search by describesnapshot and describeinstance)
+  2. service ec2
+      
+      describesnapshot name of policy:  AWSEC2VssSnapshotPolicy
+      deletesnapshot name oof policy:   AWSEC2VssSnapshotPolicy
+
+      escribevolume name of policy : EC2
+      describeinstances of policy: EC2
